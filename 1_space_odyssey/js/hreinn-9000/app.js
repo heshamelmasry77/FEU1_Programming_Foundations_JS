@@ -123,13 +123,13 @@ console.log(
   hasWeapon
 );
 
-if (hasJetPack) {
+/*if (hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
     "\u{1F691} JetPack NOT enabled, please enable jetPack before doing a space walk"
   );
-}
+}*/
 
 /*
  2. BROKEN SATELLITE::::::
@@ -161,7 +161,7 @@ if (hasJetPack) {
       create an if condition in your loop to print only 1 response using a comparison operator.
 */
 console.log("\u{1F327} METEOR SHOWER::::::");
-
+/*
 var responses = [
   "Call basecamp and ask for assistance, but they are far away",
   "Do nothing, just push through",
@@ -169,13 +169,29 @@ var responses = [
   "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid",
 ];
 
+
 for (var i = 0; i <= responses.length; i++) {
   if (responses[i] === responses[3]) {
     console.log(responses[i]);
   }
 }
+*/
 
 // write your code here, use the console log beneath
+
+var responses = [
+  "Call basecamp and ask for assistance, but they are far away",
+  "Do nothing, just push through",
+  "Initiate core thrusters, punch 180 degrees into dash-nav and warp away from danger",
+  "ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid",
+];
+
+for (var i = 0; i < responses.length; i++) {
+  if (responses[i] === responses[3]) {
+    console.log(responses[i]);
+  }
+}
+
 // console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
 /*
@@ -188,10 +204,10 @@ for (var i = 0; i <= responses.length; i++) {
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
-var enemyCraft = false;
+var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
-var bullets = 100;
+var bullets = 10;
 
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
