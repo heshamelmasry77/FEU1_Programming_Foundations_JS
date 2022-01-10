@@ -88,7 +88,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
 */
 
 var isAlive = true;
-var name = "Uzo";
+var fullName = "nsebo-9000";
 var suitColor = "grey";
 var eyes = 2;
 var eyeColor = "brown";
@@ -106,7 +106,7 @@ var hasJetPack = true;
 
 console.log(" .-.-. Booting .-.-.");
 console.log(
-  name,
+  fullName,
   isAlive,
   hasJetPack,
   eyes,
