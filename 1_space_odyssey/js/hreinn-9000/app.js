@@ -207,7 +207,7 @@ console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
-var bullets = 10;
+var bullets = 100;
 
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
@@ -368,34 +368,49 @@ var planets = [
   ],
 ];
 
+// console.log(planets[0][0]);
+
 console.group(planets[0][0]); // Mercury.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.log("Description", planets[0][1][0]);
+console.log("Surface temperature", planets[0][1][1]);
+console.log("Mass", planets[0][1][2]);
 console.groupEnd();
 
-console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:", planets[1][1][0]);
+console.log("Surface temperature:", planets[1][1][1]);
+console.log("Mass:", planets[1][1][2]);
 console.groupEnd();
 
-console.group(); // Earth.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.group(planets[2][0]); // Earth.
+console.log("Description:", planets[2][1][0]);
+console.log("Surface temperature:", planets[2][1][1]);
+console.log("Mass:", planets[2][1][2]);
 console.groupEnd();
 
-console.group(); // Mars.
-console.log("Description:");
-console.log("Surface temperature:");
-console.log("Mass:");
+console.group(planets[3][0]); // Mars.
+console.log("Description:", planets[3][1][0]);
+console.log("Surface temperature:", planets[3][1][1]);
+console.log("Mass:", planets[3][1][2]);
 console.groupEnd();
+
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
+
+for (var i = 0; i < planets.length; i++) { // Array before adding new planets
+  console.log(planets[i]);
+}
+
+planets.unshift(["SATURN", ["Description", "Surface temperature", "Mass"]],["NEPTUNE", ["Description", "Surface temperature", "Mass"]]);
+
+console.log("Break");
+
+for (var i = 0; i < planets.length; i++) { // Array after adding SATURN and NEPTUNE
+  console.log(planets[i]);
+}
 
 /*
  7. Android Object REFACTOR:::::
