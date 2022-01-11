@@ -211,15 +211,15 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-// if (enemyCraft && photonLaser && photonLaserEnabled) {
-//if (bullets >== 100) {
-// for (var i = 0; i <= 100; i++) {
-//  console.log(" pew pew pew !! you got them!!");
-// }
-// } else {
-// console.log ('DEAD');
-// }
-// }
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+  if (bullets >= 100) {
+    for (var i = 0; i <= 100; i++) {
+      console.log(" pew pew pew !! you got them!!");
+    }
+  } else {
+    console.log("DEAD");
+  }
+}
 
 /*
  5. LUNAR LANDING:::::
@@ -236,7 +236,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     tip: varName.keyName (this is how to extract a value from an object)
 */
-console.log("\u{1F311} LUNAR LANDING:::::");
+console.log(" LUNAR LANDING:::::");
 
 // start coding here
 
