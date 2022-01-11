@@ -87,9 +87,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 
-console.log("test");
-
-var isAlive = true;
+/*var isAlive = true;
 var name = "Hreinn";
 var suitColor = "Blue";
 var eyes = 2;
@@ -104,10 +102,30 @@ var canRun = false;
 var canFly = true;
 var hasWeapon = false;
 var isInGoodMood = true;
-var hasJetPack = true;
+var hasJetPack = true;*/
+
+var android = {
+  name: "Hreinn",
+  isAlive: true,
+  suitColor: "Blue",
+  eyes: 2,
+  eyeColor: "Green",
+  hairColor: "Black",
+  legs: 2,
+  arms: 4,
+  hands: 2,
+  ears: 1,
+  canWalk: false,
+  canRun: false,
+  canFly: true,
+  hasWeapon: false,
+  isInGoodMood: true,
+  hasJetPack: true,
+};
 
 console.log("\u{1F916} .-.-. Booting .-.-.");
-console.log(
+console.log(android);
+/*console.log(
   name,
   isAlive,
   hasJetPack,
@@ -121,7 +139,7 @@ console.log(
   canWalk,
   canFly,
   hasWeapon
-);
+);*/
 
 /*if (hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
@@ -139,7 +157,7 @@ console.log(
 */
 console.log("\u{1F6F0} BROKEN SATELLITE::::::");
 
-if (hasJetPack) {
+if (android.hasJetPack) {
   console.log("JetPack is enabled!!! off I go outside to fix the satellite");
 } else {
   console.log(
@@ -259,32 +277,62 @@ var lunarRadar = {
 
 // Level 1 convert this psuedocode to functioning code.
 
-
-if (lunarRadar.isEnabled === true && (lunarRadar.lat !== undefined && lunarRadar.long !== undefined)) {
-  console.log("\u{1F91F} looking good " + lunarRadar.name + " we are making our descent, now entering approach speed");
+if (
+  lunarRadar.isEnabled === true &&
+  lunarRadar.lat !== undefined &&
+  lunarRadar.long !== undefined
+) {
+  console.log(
+    "\u{1F91F} looking good " +
+      lunarRadar.name +
+      " we are making our descent, now entering approach speed"
+  );
   if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 300) {
-    console.log("\u{269B} well done " + lunarRadar.name + " we have touched down safely. Lets get some samples and get heck outta here!");
-  }      
-  else if (lunarRadar.approachSpeed >= 300 && lunarRadar.approachSpeed < 400) {
-    console.log("\u{1F627} coming in hot " + lunarRadar.name + " decrease pitch!");  } 
-    
-  else if (lunarRadar.approachSpeed >= 400 && lunarRadar.approachSpeed < 500) {
-    console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
-  }    
-  else if (lunarRadar.approachSpeed >= 500 && lunarRadar.approachSpeed < 600) {
-    console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
-  }    
-  else if (lunarRadar.approachSpeed >= 600) {
-    console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
-  }  
-  else if (lunarRadar.approachSpeed <= 100) {
-    console.log("\u{1F47D} hmmm need a bit more heat " + lunarRadar.name + " lets increase pitch and we should have a smooth landing")
-  }  
-  else {
-    console.log('Please enter an approach speed');
+    console.log(
+      "\u{269B} well done " +
+        lunarRadar.name +
+        " we have touched down safely. Lets get some samples and get heck outta here!"
+    );
+  } else if (
+    lunarRadar.approachSpeed >= 300 &&
+    lunarRadar.approachSpeed < 400
+  ) {
+    console.log(
+      "\u{1F627} coming in hot " + lunarRadar.name + " decrease pitch!"
+    );
+  } else if (
+    lunarRadar.approachSpeed >= 400 &&
+    lunarRadar.approachSpeed < 500
+  ) {
+    console.log(
+      "\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!"
+    );
+  } else if (
+    lunarRadar.approachSpeed >= 500 &&
+    lunarRadar.approachSpeed < 600
+  ) {
+    console.log(
+      "\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!"
+    );
+  } else if (lunarRadar.approachSpeed >= 600) {
+    console.log(
+      "\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!"
+    );
+  } else if (lunarRadar.approachSpeed <= 100) {
+    console.log(
+      "\u{1F47D} hmmm need a bit more heat " +
+        lunarRadar.name +
+        " lets increase pitch and we should have a smooth landing"
+    );
+  } else {
+    console.log("Please enter an approach speed");
   }
 } else {
-  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + lunarRadar.name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      lunarRadar.name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
 }
 
 // Level 2 convert it to a switch statement.
@@ -293,29 +341,55 @@ console.log("break");
 if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
   switch (true) {
     case lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 300:
-      console.log("\u{269B} well done " + lunarRadar.name + " we have touched down safely. Lets get some samples and get heck outta here!");
-      break;  
+      console.log(
+        "\u{269B} well done " +
+          lunarRadar.name +
+          " we have touched down safely. Lets get some samples and get heck outta here!"
+      );
+      break;
     case lunarRadar.approachSpeed >= 300 && lunarRadar.approachSpeed < 400:
-      console.log("\u{1F627} coming in hot " + lunarRadar.name + " decrease pitch!")
-      break; 
+      console.log(
+        "\u{1F627} coming in hot " + lunarRadar.name + " decrease pitch!"
+      );
+      break;
     case lunarRadar.approachSpeed >= 400 && lunarRadar.approachSpeed < 500:
-      console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
-      break;      
+      console.log(
+        "\u{1F627} coming in way too hot " +
+          lunarRadar.name +
+          " decrease pitch!"
+      );
+      break;
     case lunarRadar.approachSpeed >= 500 && lunarRadar.approachSpeed < 600:
-      console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " +
+          lunarRadar.name +
+          " decrease pitch!"
+      );
       break;
     case lunarRadar.approachSpeed >= 600:
-      console.log("\u{1F627} coming in way too hot " + lunarRadar.name + " decrease pitch!");
+      console.log(
+        "\u{1F627} coming in way too hot " +
+          lunarRadar.name +
+          " decrease pitch!"
+      );
       break;
     case lunarRadar.approachSpeed <= 100:
-      console.log("\u{1F47D} hmmm need a bit more heat " + lunarRadar.name + " lets increase pitch and we should have a smooth landing")
+      console.log(
+        "\u{1F47D} hmmm need a bit more heat " +
+          lunarRadar.name +
+          " lets increase pitch and we should have a smooth landing"
+      );
       break;
     default:
       console.log("Please enter an approach speed");
-      break;      
-  }   
+      break;
+  }
 } else {
-  console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " + lunarRadar.name + " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} " +
+      lunarRadar.name +
+      " you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
 }
 
 /*
@@ -334,82 +408,95 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
 console.log("\u{1F319} PLANETARY INFO-DASH:::::");
 
 var planets = [
-  [
-    "MERCURY",
-    [
+  {
+    name: "MERCURY",
+    description:
       "The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.",
-      "-173 to 427°C",
-      "330,104,000,000,000 billion kg (0.055 x Earth)",
-    ],
-  ],
-  [
-    "JUPITER",
-    [
+    surfaceTemp: "-173 to 427°C",
+    mass: "330,104,000,000,000 billion kg (0.055 x Earth)",
+  },
+  {
+    name: "JUPITER",
+    description:
       "Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.",
-      "-108°C",
-      "1,898,130,000,000,000,000 billion kg (317.83 x Earth)",
-    ],
-  ],
-  [
-    "EARTH",
-    [
+    surfaceTemp: "-108°C",
+    mass: "1,898,130,000,000,000,000 billion kg (317.83 x Earth)",
+  },
+  {
+    name: "EARTH",
+    description:
       "Earth is the third planet from the Sun and the fifth largest planet in the Solar System with the highest density. It is currently the only known location where life is present.",
+    surfaceTemp:
       "110 degrees Fahrenheit / 48 degrees Celsius, and the lowest around -126 degrees Fahrenheit / -88 degrees Celsius, maybe even lower",
-      "6.6 sextillion tons",
-    ],
-  ],
-  [
-    "MARS",
-    [
+    mass: "6.6 sextillion tons",
+  },
+  {
+    name: "MARS",
+    description:
       "Mars is the fourth planet from the Sun and the second-smallest planet with a thin atmosphere, having the surface features reminiscent both of the impact craters of the Moon, and the valleys, deserts and polar ice caps of Earth. It is the most widely searched planet for life.",
-      "87 to -5 °C",
-      "641,693,000,000,000 billion kg (0.107 x Earth)",
-    ],
-  ],
+    surfaceTemp: "87 to -5 °C",
+    mass: "641,693,000,000,000 billion kg (0.107 x Earth)",
+  },
 ];
 
 // console.log(planets[0][0]);
 
-console.group(planets[0][0]); // Mercury.
-console.log("Description", planets[0][1][0]);
-console.log("Surface temperature", planets[0][1][1]);
-console.log("Mass", planets[0][1][2]);
+console.group(planets[0].name); // Mercury.
+console.log("Description: ", planets[0].description);
+console.log("Surface temperature: ", planets[0].surfaceTemp);
+console.log("Mass: ", planets[0].mass);
 console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log("Description:", planets[1][1][0]);
-console.log("Surface temperature:", planets[1][1][1]);
-console.log("Mass:", planets[1][1][2]);
+console.group(planets[1].name); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log("Description:", planets[1].description);
+console.log("Surface temperature:", planets[1].surfaceTemp);
+console.log("Mass:", planets[1].mass);
 console.groupEnd();
 
-console.group(planets[2][0]); // Earth.
-console.log("Description:", planets[2][1][0]);
-console.log("Surface temperature:", planets[2][1][1]);
-console.log("Mass:", planets[2][1][2]);
+console.group(planets[2].name); // Earth.
+console.log("Description:", planets[2].description);
+console.log("Surface temperature:", planets[2].surfaceTemp);
+console.log("Mass:", planets[2].mass);
 console.groupEnd();
 
-console.group(planets[3][0]); // Mars.
-console.log("Description:", planets[3][1][0]);
-console.log("Surface temperature:", planets[3][1][1]);
-console.log("Mass:", planets[3][1][2]);
+console.group(planets[3].name); // Mars.
+console.log("Description:", planets[3].description);
+console.log("Surface temperature:", planets[3].surfaceTemp);
+console.log("Mass:", planets[3].mass);
 console.groupEnd();
-
 
 /*
  Level 2::::::::::::::
  Add 2 New planets of your choosing to the front of the Array : https://nineplanets.org
 */
 
-for (var i = 0; i < planets.length; i++) { // Array before adding new planets
-  console.log(planets[i]);
+for (var i = 0; i < planets.length; i++) {
+  // Array before adding new planets
+  console.log(planets[i].name);
 }
 
-planets.unshift(["SATURN", ["Description", "Surface temperature", "Mass"]],["NEPTUNE", ["Description", "Surface temperature", "Mass"]]);
+planets.unshift(
+  {
+    name: "NEPTUNE",
+    description: "description",
+    surfaceTemp: "10",
+    mass: "10kg",
+  },
+  {
+    name: "SATURN",
+    description: "description",
+    surfaceTemp: "106",
+    mass: "104kg",
+  }
+  /*["SATURN", ["Description", "Surface temperature", "Mass"]],
+  ["NEPTUNE", ["Description", "Surface temperature", "Mass"]]*/
+);
 
 console.log("Break");
 
-for (var i = 0; i < planets.length; i++) { // Array after adding SATURN and NEPTUNE
-  console.log(planets[i]);
+for (var i = 0; i < planets.length; i++) {
+  // Array after adding SATURN and NEPTUNE
+  console.log(planets[i].name);
 }
 
 /*
