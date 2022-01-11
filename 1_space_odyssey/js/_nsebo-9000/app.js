@@ -135,16 +135,22 @@ if (hasJetPack) {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log(" BROKEN SATELLITE::::::");
+if (hasJetPack === true) {
+  console.log("The droid can go outside to fix the satellite");
+} else {
+  console.log(" BROKEN SATELLITE::::::");
+}
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
  */
-
-console.log("JetPack is enabled!!! off I go outside to fix the satellite");
-console.log(
-  "JetPack NOT enabled, please enable jetPack before doing a space walk"
-);
+if (hasJetPack === true) {
+  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+  console.log(
+    "JetPack NOT enabled, please enable jetPack before doing a space walk"
+  );
+}
 
 /*
  3. METEOR SHOWER::::::
@@ -162,13 +168,13 @@ var responses = [
 ];
 
 for (var i = 0; i <= responses.length; i++) {
-  if (responses[i] === responses[3]) {
+  if (responses[i] === responses[2]) {
     console.log(responses[i]);
   }
 }
 
 // write your code here, use the console log beneath
-// console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
+console.log(" Swoosh -> -> Ship is steered to safety!");
 
 /*
  4. ALIENS SPACE CRAFT ENCROACHING::::::
@@ -177,10 +183,10 @@ for (var i = 0; i <= responses.length; i++) {
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
 */
-console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
+console.log(" ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
-var enemyCraft = false;
+var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
 var bullets = 100;
@@ -188,10 +194,10 @@ var bullets = 100;
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
     for (var i = 0; i <= 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+      console.log(" pew pew pew !! you got them!!");
     }
   } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8}");
+    console.log(" DEAD ");
   }
 } else {
   console.log("do your homework");
@@ -205,6 +211,15 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
+// if (enemyCraft && photonLaser && photonLaserEnabled) {
+//if (bullets >== 100) {
+// for (var i = 0; i <= 100; i++) {
+//  console.log(" pew pew pew !! you got them!!");
+// }
+// } else {
+// console.log ('DEAD');
+// }
+// }
 
 /*
  5. LUNAR LANDING:::::
