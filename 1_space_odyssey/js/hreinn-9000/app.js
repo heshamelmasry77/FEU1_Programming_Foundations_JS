@@ -222,22 +222,50 @@ for (var i = 0; i < responses.length; i++) {
 console.log("\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::");
 
 // a.
-var enemyCraft = true;
-var photonLaser = true;
-var photonLaserEnabled = true;
-var bullets = 100;
+// var enemyCraft = true;
+// var photonLaser = true;
+// var photonLaserEnabled = true;
+// var bullets = 100;
 
-if (enemyCraft && photonLaser && photonLaserEnabled) {
-  if (bullets >= 100) {
-    for (var i = 0; i <= 100; i++) {
-      console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+function spaceCraftEncroaching(
+  enemyCraft,
+  photonLaser,
+  photonLaserEnabled,
+  bullets
+) {
+  if (
+    typeof enemyCraft === "boolean" &&
+    typeof photonLaser === "boolean" &&
+    typeof photonLaserEnabled === "boolean" &&
+    enemyCraft &&
+    photonLaser &&
+    photonLaserEnabled
+  ) {
+    if (bullets >= 100) {
+      for (var i = 0; i <= 100; i++) {
+        console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+      }
+    } else {
+      console.log("\u{1F9E8} DEAD \u{1F9E8}");
     }
   } else {
-    console.log("\u{1F9E8} DEAD \u{1F9E8}");
+    console.log("do your homework");
   }
-} else {
-  console.log("do your homework");
 }
+
+spaceCraftEncroaching(true, true, true, 100);
+
+// if (enemyCraft && photonLaser && photonLaserEnabled) {
+//   if (bullets >= 100) {
+//     for (var i = 0; i <= 100; i++) {
+//       console.log("\u{2708} \u{1F525} pew pew pew !! you got them!!");
+//     }
+//   } else {
+//     console.log("\u{1F9E8} DEAD \u{1F9E8}");
+//   }
+// } else {
+//   console.log("do your homework");
+// }
 
 /*
   If its an enemyCraft && photonLaser && photonLaserEnabled
@@ -275,7 +303,7 @@ var lunarRadar = {
   approachSpeed: 600, // "ft per minute"
 };
 
-// Level 1 convert this psuedocode to functioning code.
+// Level 1 convert this psuedocode to functioning code..
 
 if (
   lunarRadar.isEnabled === true &&
